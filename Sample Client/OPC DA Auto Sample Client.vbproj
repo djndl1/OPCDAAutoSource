@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{894BFF2F-45E6-443A-998F-A24F0EA37E53}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>VbNetSampleClient</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>VbNetSampleClient</RootNamespace>
+    <StartupObject>VbNetSampleClient.MainForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VbNetSampleClient.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>VbNetSampleClient.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample Controls\OPC DA Auto Sample Controls.csproj">
+      <Name>VbNetSampleControls</Name>
+      <Project>{90A05E73-CE76-4950-B23C-FEDEF5FD092C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddGroupDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemsDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowseCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowseFiltersDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseItemsDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGroupDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditItemDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnumCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupItemsCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupsCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupUpdatesCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemsCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertiesCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReadItemsDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectServerDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WriteItemsDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AddGroupDlg.resx">
+      <DependentUpon>AddGroupDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddItemsDlg.resx">
+      <DependentUpon>AddItemsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseCtrl.resx">
+      <DependentUpon>BrowseCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseFiltersDlg.resx">
+      <DependentUpon>BrowseFiltersDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseItemsDlg.resx">
+      <DependentUpon>BrowseItemsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGroupDlg.resx">
+      <DependentUpon>EditGroupDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditItemDlg.resx">
+      <DependentUpon>EditItemDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnumCtrl.resx">
+      <DependentUpon>EnumCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupItemsCtrl.resx">
+      <DependentUpon>GroupItemsCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupsCtrl.resx">
+      <DependentUpon>GroupsCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupUpdatesCtrl.resx">
+      <DependentUpon>GroupUpdatesCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsCtrl.resx">
+      <DependentUpon>ItemsCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertiesCtrl.resx">
+      <DependentUpon>PropertiesCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadItemsDlg.resx">
+      <DependentUpon>ReadItemsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <DependentUpon>Resources.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectServerDlg.resx">
+      <DependentUpon>SelectServerDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WriteItemsDlg.resx">
+      <DependentUpon>WriteItemsDlg.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="OPCAutomation">
+      <Guid>{28E68F91-8D75-11D1-8DC3-3C302A000000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
