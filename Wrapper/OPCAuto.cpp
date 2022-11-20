@@ -82,7 +82,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 	return TRUE;
 }
 
-main()   // This is only to satisfy the linker when using MT lib
+int main()   // This is only to satisfy the linker when using MT lib
 { 
 	return 0;
 }

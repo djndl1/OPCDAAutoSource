@@ -381,7 +381,7 @@ STDMETHODIMP COPCItems::get__NewEnum(IUnknown** ppUnknown)
 		hResult = pEnumerator->Init(&pArray[0], &pArray[m_items.size()], NULL, AtlFlagCopy);
 		
 		// clear the local variant array.
-		for (ii = 0; ii < (LONG)m_items.size(); ii++)
+		for (LONG ii = 0; ii < (LONG)m_items.size(); ii++)
 		{
 			VariantClear(&pArray[ii]);
 		}
@@ -799,7 +799,7 @@ STDMETHODIMP COPCItems::AddItems(
 
 		LONG lIndex = 0;
 
-		for (ii = 0; ii < NumItems; ii++)
+		for (LONG ii = 0; ii < NumItems; ii++)
 		{
 			if (SUCCEEDED(pErrors[ii]))
 			{
@@ -822,7 +822,7 @@ STDMETHODIMP COPCItems::AddItems(
 		if (SUCCEEDED(hResult))
 		{
 			// check item level errors.
-			for (ii = 0; ii < lIndex; ii++)
+			for (LONG ii = 0; ii < lIndex; ii++)
 			{
 				if (SUCCEEDED(pErrors[ii]))
 				{
@@ -1010,7 +1010,7 @@ STDMETHODIMP COPCItems::Remove(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBound);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{
 		SafeArrayPutElement(*ppErrors, &ii, &pErrors[ii-1]);
 	}
@@ -1105,7 +1105,7 @@ STDMETHODIMP COPCItems::SetActive(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBound);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{
 		// override error code for invalid items.
 		if (ppItems[ii-1] == NULL)
@@ -1273,7 +1273,7 @@ STDMETHODIMP COPCItems::SetDataTypes(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBound);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{
 		// override error code for invalid items.
 		if (ppItems[ii-1] == NULL)

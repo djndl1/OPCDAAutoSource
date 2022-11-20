@@ -290,7 +290,7 @@ STDMETHODIMP COPCBrowser::get__NewEnum(IUnknown** ppUnk)
 		hResult = pEnumerator->Init(&pArray[0], &pArray[m_names.size()], NULL, AtlFlagCopy);
 		
 		// clear the local variant array.
-		for (ii = 0; ii < (LONG)m_names.size(); ii++)
+		for (LONG ii = 0; ii < (LONG)m_names.size(); ii++)
 		{
 			VariantClear(&pArray[ii]);
 		}

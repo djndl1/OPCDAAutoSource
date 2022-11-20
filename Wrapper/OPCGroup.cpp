@@ -1224,7 +1224,7 @@ STDMETHODIMP COPCGroup::SyncRead(
 	*ppValues = SafeArrayCreate(VT_VARIANT, 1, &cBounds);
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{
 		// override the error code for invalid items.
 		if (ppItems[ii-1] == NULL)
@@ -1424,7 +1424,7 @@ STDMETHODIMP COPCGroup::SyncWrite(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{		
 		// override the error code for invalid items.
 		if (ppItems[ii-1] == NULL)
@@ -1583,7 +1583,7 @@ STDMETHODIMP COPCGroup::AsyncRead(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{		
 		// override the error code for invalid items.
 		if (ppItems[ii-1] == NULL)
@@ -1743,7 +1743,7 @@ STDMETHODIMP COPCGroup::AsyncWrite(
 
 	*ppErrors = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= NumItems; ii++)
+	for (LONG ii = 1; ii <= NumItems; ii++)
 	{
 		// override the error code for invalid items.
 		if (ppItems[ii-1] == NULL)

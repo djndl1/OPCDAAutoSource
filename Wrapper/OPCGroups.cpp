@@ -318,7 +318,7 @@ STDMETHODIMP COPCGroups::get__NewEnum(IUnknown** ppUnk)
 		hResult = pEnumerator->Init(&pArray[0], &pArray[m_groups.size()], NULL, AtlFlagCopy);
 		
 		// clear the local variant array.
-		for (ii = 0; ii < (LONG)m_groups.size(); ii++)
+		for (LONG ii = 0; ii < (LONG)m_groups.size(); ii++)
 		{
 			VariantClear(&pArray[ii]);
 		}

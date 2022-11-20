@@ -1731,7 +1731,7 @@ STDMETHODIMP COPCAutoServer::GetItemProperties(
 	*ppPropertyValues = SafeArrayCreate(VT_VARIANT, 1, &cBounds);
 	*ppErrors         = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= Count; ii++)
+	for (LONG ii = 1; ii <= Count; ii++)
 	{
 		VariantToAutomation(&pValues[ii-1]);
 		SafeArrayPutElement(*ppPropertyValues, (LONG*)&ii, &pValues[ii-1]);
@@ -1830,7 +1830,7 @@ STDMETHODIMP COPCAutoServer::LookupItemIDs(
 	*ppNewItemIDs = SafeArrayCreate(VT_BSTR, 1, &cBounds);
 	*ppErrors     = SafeArrayCreate(VT_I4, 1, &cBounds);
 
-	for (ii = 1; ii <= Count; ii++)
+	for (LONG ii = 1; ii <= Count; ii++)
 	{
 		BSTR szItemID = SysAllocString(pNewItemIDs[ii-1]);
 	

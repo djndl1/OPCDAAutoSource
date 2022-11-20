@@ -122,8 +122,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
     </ClCompile>
     <CustomBuildStep>
       <Message>Registering ActiveX Control...</Message>
-      <Command>regsvr32 /s /c "$(TargetPath)"
-echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg"
+      <Command>
 </Command>
       <Outputs>$(OutDir)regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>

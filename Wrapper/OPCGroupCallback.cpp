@@ -109,7 +109,7 @@ STDMETHODIMP COPCGroup::OnDataChange(
 
 	list<COPCItem*>::iterator iter = items.begin();
 
-	for (ii = 1; ii <= (LONG)items.size() && iter != items.end(); ii++)
+	for (LONG ii = 1; ii <= (LONG)items.size() && iter != items.end(); ii++)
 	{		
 		COPCItem* pItem = *iter;
 
@@ -499,7 +499,7 @@ STDMETHODIMP_(void) COPCGroup::OnDataChange(LPFORMATETC pFE, LPSTGMEDIUM pSTM)
 
 	list<COPCItem*>::iterator iter = items.begin();
 
-	for (ii = 1; ii <= (LONG)items.size() && iter != items.end(); ii++)
+	for (LONG ii = 1; ii <= (LONG)items.size() && iter != items.end(); ii++)
 	{		
 		COPCItem* pItem = *iter;
 
