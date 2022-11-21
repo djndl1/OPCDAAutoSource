@@ -85,11 +85,11 @@ namespace Opc
 				out totalEntries,
 				SV_TYPE_WORKSTATION | SV_TYPE_SERVER,
 				IntPtr.Zero,
-				IntPtr.Zero);		
+				IntPtr.Zero);
 
 			if (result != 0)
 			{
-				throw new ApplicationException("NetApi Error = " + String.Format("0x{0,0:X}", result));
+				return new string[] { "localhost" };
 			}
 
 			string[] computers = new string[entriesRead];
