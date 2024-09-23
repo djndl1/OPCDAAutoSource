@@ -2,6 +2,16 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
+*.cpp eol=crlf
+*.h eol=crlf
+*.hpp eol=crlf
+*.c eol=crlf
+*.vcproj eol=crlf
+*.vcxproj eol=crlf
+*.sln eol=crlf
+*.vb eol=crlf
+*.cs eol=crlf
+*.csproj eol=crlf
 
 ###############################################################################
 # Set default behavior for command prompt diff.

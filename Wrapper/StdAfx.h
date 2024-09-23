@@ -38,7 +38,7 @@
 #define _ATL_STATIC_REGISTRY
 #endif
 
-#define _WIN32_WINNT 0x0400
+#define _WIN32_WINNT 0x0501
 #define _ATL_DEBUG_QI
 
 #include <atlbase.h>

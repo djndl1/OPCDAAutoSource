@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
-/* at Tue Jan 19 11:14:07 2038
+ /* File created by MIDL compiler version 7.00.0555 */
+/* at Mon Sep 23 13:20:17 2024
  */
 /* Compiler settings for OPCAuto.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -16,11 +16,12 @@
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
 
 #include "rpc.h"
@@ -28,7 +29,7 @@
 
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
-#endif /* __RPCNDR_H_VERSION__ */
+#endif // __RPCNDR_H_VERSION__
 
 #ifndef COM_NO_WINDOWS_H
 #include "windows.h"
@@ -47,91 +48,78 @@
 #ifndef __IOPCServerEvent_FWD_DEFINED__
 #define __IOPCServerEvent_FWD_DEFINED__
 typedef interface IOPCServerEvent IOPCServerEvent;
-
 #endif 	/* __IOPCServerEvent_FWD_DEFINED__ */
 
 
 #ifndef __IOPCGroupsEvent_FWD_DEFINED__
 #define __IOPCGroupsEvent_FWD_DEFINED__
 typedef interface IOPCGroupsEvent IOPCGroupsEvent;
-
 #endif 	/* __IOPCGroupsEvent_FWD_DEFINED__ */
 
 
 #ifndef __IOPCGroupEvent_FWD_DEFINED__
 #define __IOPCGroupEvent_FWD_DEFINED__
 typedef interface IOPCGroupEvent IOPCGroupEvent;
-
 #endif 	/* __IOPCGroupEvent_FWD_DEFINED__ */
 
 
 #ifndef __IOPCAutoServer_FWD_DEFINED__
 #define __IOPCAutoServer_FWD_DEFINED__
 typedef interface IOPCAutoServer IOPCAutoServer;
-
 #endif 	/* __IOPCAutoServer_FWD_DEFINED__ */
 
 
 #ifndef __DIOPCServerEvent_FWD_DEFINED__
 #define __DIOPCServerEvent_FWD_DEFINED__
 typedef interface DIOPCServerEvent DIOPCServerEvent;
-
 #endif 	/* __DIOPCServerEvent_FWD_DEFINED__ */
 
 
 #ifndef __OPCBrowser_FWD_DEFINED__
 #define __OPCBrowser_FWD_DEFINED__
 typedef interface OPCBrowser OPCBrowser;
-
 #endif 	/* __OPCBrowser_FWD_DEFINED__ */
 
 
 #ifndef __IOPCGroups_FWD_DEFINED__
 #define __IOPCGroups_FWD_DEFINED__
 typedef interface IOPCGroups IOPCGroups;
-
 #endif 	/* __IOPCGroups_FWD_DEFINED__ */
 
 
 #ifndef __DIOPCGroupsEvent_FWD_DEFINED__
 #define __DIOPCGroupsEvent_FWD_DEFINED__
 typedef interface DIOPCGroupsEvent DIOPCGroupsEvent;
-
 #endif 	/* __DIOPCGroupsEvent_FWD_DEFINED__ */
 
 
 #ifndef __IOPCGroup_FWD_DEFINED__
 #define __IOPCGroup_FWD_DEFINED__
 typedef interface IOPCGroup IOPCGroup;
-
 #endif 	/* __IOPCGroup_FWD_DEFINED__ */
 
 
 #ifndef __DIOPCGroupEvent_FWD_DEFINED__
 #define __DIOPCGroupEvent_FWD_DEFINED__
 typedef interface DIOPCGroupEvent DIOPCGroupEvent;
-
 #endif 	/* __DIOPCGroupEvent_FWD_DEFINED__ */
 
 
 #ifndef __OPCItems_FWD_DEFINED__
 #define __OPCItems_FWD_DEFINED__
 typedef interface OPCItems OPCItems;
-
 #endif 	/* __OPCItems_FWD_DEFINED__ */
 
 
 #ifndef __OPCItem_FWD_DEFINED__
 #define __OPCItem_FWD_DEFINED__
 typedef interface OPCItem OPCItem;
-
 #endif 	/* __OPCItem_FWD_DEFINED__ */
 
 
 #ifndef __IOPCActivator_FWD_DEFINED__
 #define __IOPCActivator_FWD_DEFINED__
 typedef interface IOPCActivator IOPCActivator;
-
 #endif 	/* __IOPCActivator_FWD_DEFINED__ */
 
 
@@ -225,7 +213,6 @@ EXTERN_C const IID IID_IOPCServerEvent;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCServerEventVtbl
@@ -236,7 +223,7 @@ EXTERN_C const IID IID_IOPCServerEvent;
             IOPCServerEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCServerEvent * This);
@@ -264,22 +251,14 @@ EXTERN_C const IID IID_IOPCServerEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCServerEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         HRESULT ( STDMETHODCALLTYPE *ServerShutDown )( 
             IOPCServerEvent * This,
@@ -361,7 +340,6 @@ EXTERN_C const IID IID_IOPCGroupsEvent;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCGroupsEventVtbl
@@ -372,7 +350,7 @@ EXTERN_C const IID IID_IOPCGroupsEvent;
             IOPCGroupsEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCGroupsEvent * This);
@@ -400,22 +378,14 @@ EXTERN_C const IID IID_IOPCGroupsEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCGroupsEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GlobalDataChange )( 
             IOPCGroupsEvent * This,
@@ -520,7 +490,6 @@ EXTERN_C const IID IID_IOPCGroupEvent;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCGroupEventVtbl
@@ -531,7 +500,7 @@ EXTERN_C const IID IID_IOPCGroupEvent;
             IOPCGroupEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCGroupEvent * This);
@@ -559,22 +528,14 @@ EXTERN_C const IID IID_IOPCGroupEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCGroupEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *DataChange )( 
             IOPCGroupEvent * This,
@@ -674,85 +635,77 @@ EXTERN_C const IID IID_IOPCGroupEvent;
 
 
 enum OPCNamespaceTypes
-    {
-        OPCHierarchical	= 1,
-        OPCFlat	= ( OPCHierarchical + 1 ) 
+    {	OPCHierarchical	= 1,
+	OPCFlat	= ( OPCHierarchical + 1 ) 
     } ;
 
 enum OPCDataSource
-    {
-        OPCCache	= 1,
-        OPCDevice	= ( OPCCache + 1 ) 
+    {	OPCCache	= 1,
+	OPCDevice	= ( OPCCache + 1 ) 
     } ;
 
 enum OPCAccessRights
-    {
-        OPCReadable	= 1,
-        OPCWritable	= ( OPCReadable + 1 ) 
+    {	OPCReadable	= 1,
+	OPCWritable	= ( OPCReadable + 1 ) 
     } ;
 
 enum OPCServerState
-    {
-        OPCRunning	= 1,
-        OPCFailed	= ( OPCRunning + 1 ) ,
-        OPCNoconfig	= ( OPCFailed + 1 ) ,
-        OPCSuspended	= ( OPCNoconfig + 1 ) ,
-        OPCTest	= ( OPCSuspended + 1 ) ,
-        OPCDisconnected	= ( OPCTest + 1 ) 
+    {	OPCRunning	= 1,
+	OPCFailed	= ( OPCRunning + 1 ) ,
+	OPCNoconfig	= ( OPCFailed + 1 ) ,
+	OPCSuspended	= ( OPCNoconfig + 1 ) ,
+	OPCTest	= ( OPCSuspended + 1 ) ,
+	OPCDisconnected	= ( OPCTest + 1 ) 
     } ;
 
 enum OPCErrors
-    {
-        OPCInvalidHandle	= 0xc0040001L,
-        OPCBadType	= 0xc0040004L,
-        OPCPublic	= 0xc0040005L,
-        OPCBadRights	= 0xc0040006L,
-        OPCUnknownItemID	= 0xc0040007L,
-        OPCInvalidItemID	= 0xc0040008L,
-        OPCInvalidFilter	= 0xc0040009L,
-        OPCUnknownPath	= 0xc004000aL,
-        OPCRange	= 0xc004000bL,
-        OPCDuplicateName	= 0xc004000cL,
-        OPCUnsupportedRate	= 0x4000dL,
-        OPCClamp	= 0x4000eL,
-        OPCInuse	= 0x4000fL,
-        OPCInvalidConfig	= 0xc0040010L,
-        OPCNotFound	= 0xc0040011L,
-        OPCInvalidPID	= 0xc0040203L
+    {	OPCInvalidHandle	= 0xc0040001L,
+	OPCBadType	= 0xc0040004L,
+	OPCPublic	= 0xc0040005L,
+	OPCBadRights	= 0xc0040006L,
+	OPCUnknownItemID	= 0xc0040007L,
+	OPCInvalidItemID	= 0xc0040008L,
+	OPCInvalidFilter	= 0xc0040009L,
+	OPCUnknownPath	= 0xc004000aL,
+	OPCRange	= 0xc004000bL,
+	OPCDuplicateName	= 0xc004000cL,
+	OPCUnsupportedRate	= 0x4000dL,
+	OPCClamp	= 0x4000eL,
+	OPCInuse	= 0x4000fL,
+	OPCInvalidConfig	= 0xc0040010L,
+	OPCNotFound	= 0xc0040011L,
+	OPCInvalidPID	= 0xc0040203L
     } ;
 
 enum OPCQuality
-    {
-        OPCQualityMask	= 0xc0,
-        OPCQualityBad	= 0,
-        OPCQualityUncertain	= 0x40,
-        OPCQualityGood	= 0xc0
+    {	OPCQualityMask	= 0xc0,
+	OPCQualityBad	= 0,
+	OPCQualityUncertain	= 0x40,
+	OPCQualityGood	= 0xc0
     } ;
 
 enum OPCQualityStatus
-    {
-        OPCStatusMask	= 0xfc,
-        OPCStatusConfigError	= 0x4,
-        OPCStatusNotConnected	= 0x8,
-        OPCStatusDeviceFailure	= 0xc,
-        OPCStatusSensorFailure	= 0x10,
-        OPCStatusLastKnown	= 0x14,
-        OPCStatusCommFailure	= 0x18,
-        OPCStatusOutOfService	= 0x1c,
-        OPCStatusLastUsable	= 0x44,
-        OPCStatusSensorCal	= 0x50,
-        OPCStatusEGUExceeded	= 0x54,
-        OPCStatusSubNormal	= 0x58,
-        OPCStatusLocalOverride	= 0xd8
+    {	OPCStatusMask	= 0xfc,
+	OPCStatusConfigError	= 0x4,
+	OPCStatusNotConnected	= 0x8,
+	OPCStatusDeviceFailure	= 0xc,
+	OPCStatusSensorFailure	= 0x10,
+	OPCStatusLastKnown	= 0x14,
+	OPCStatusCommFailure	= 0x18,
+	OPCStatusOutOfService	= 0x1c,
+	OPCStatusLastUsable	= 0x44,
+	OPCStatusSensorCal	= 0x50,
+	OPCStatusEGUExceeded	= 0x54,
+	OPCStatusSubNormal	= 0x58,
+	OPCStatusLocalOverride	= 0xd8
     } ;
 
 enum OPCQualityLimits
-    {
-        OPCLimitMask	= 0x3,
-        OPCLimitOk	= 0,
-        OPCLimitLow	= 0x1,
-        OPCLimitHigh	= 0x2,
-        OPCLimitConst	= 0x3
+    {	OPCLimitMask	= 0x3,
+	OPCLimitOk	= 0,
+	OPCLimitLow	= 0x1,
+	OPCLimitHigh	= 0x2,
+	OPCLimitConst	= 0x3
     } ;
 
 EXTERN_C const IID LIBID_OPCAutomation;
@@ -866,7 +819,6 @@ EXTERN_C const IID IID_IOPCAutoServer;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCAutoServerVtbl
@@ -877,7 +829,7 @@ EXTERN_C const IID IID_IOPCAutoServer;
             IOPCAutoServer * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCAutoServer * This);
@@ -905,22 +857,14 @@ EXTERN_C const IID IID_IOPCAutoServer;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCAutoServer * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_StartTime )( 
             IOPCAutoServer * This,
@@ -1191,7 +1135,7 @@ EXTERN_C const IID DIID_DIOPCServerEvent;
             DIOPCServerEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             DIOPCServerEvent * This);
@@ -1219,22 +1163,14 @@ EXTERN_C const IID DIID_DIOPCServerEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             DIOPCServerEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         END_INTERFACE
     } DIOPCServerEventVtbl;
@@ -1354,7 +1290,6 @@ EXTERN_C const IID IID_OPCBrowser;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct OPCBrowserVtbl
@@ -1365,7 +1300,7 @@ EXTERN_C const IID IID_OPCBrowser;
             OPCBrowser * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             OPCBrowser * This);
@@ -1393,22 +1328,14 @@ EXTERN_C const IID IID_OPCBrowser;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             OPCBrowser * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Organization )( 
             OPCBrowser * This,
@@ -1670,7 +1597,6 @@ EXTERN_C const IID IID_IOPCGroups;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCGroupsVtbl
@@ -1681,7 +1607,7 @@ EXTERN_C const IID IID_IOPCGroups;
             IOPCGroups * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCGroups * This);
@@ -1709,22 +1635,14 @@ EXTERN_C const IID IID_IOPCGroups;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCGroups * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
             IOPCGroups * This,
@@ -1942,7 +1860,7 @@ EXTERN_C const IID DIID_DIOPCGroupsEvent;
             DIOPCGroupsEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             DIOPCGroupsEvent * This);
@@ -1970,22 +1888,14 @@ EXTERN_C const IID DIID_DIOPCGroupsEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             DIOPCGroupsEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         END_INTERFACE
     } DIOPCGroupsEventVtbl;
@@ -2146,7 +2056,6 @@ EXTERN_C const IID IID_IOPCGroup;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCGroupVtbl
@@ -2157,7 +2066,7 @@ EXTERN_C const IID IID_IOPCGroup;
             IOPCGroup * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCGroup * This);
@@ -2185,22 +2094,14 @@ EXTERN_C const IID IID_IOPCGroup;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCGroup * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
             IOPCGroup * This,
@@ -2477,7 +2378,7 @@ EXTERN_C const IID DIID_DIOPCGroupEvent;
             DIOPCGroupEvent * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             DIOPCGroupEvent * This);
@@ -2505,22 +2406,14 @@ EXTERN_C const IID DIID_DIOPCGroupEvent;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             DIOPCGroupEvent * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         END_INTERFACE
     } DIOPCGroupEventVtbl;
@@ -2662,7 +2555,6 @@ EXTERN_C const IID IID_OPCItems;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct OPCItemsVtbl
@@ -2673,7 +2565,7 @@ EXTERN_C const IID IID_OPCItems;
             OPCItems * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             OPCItems * This);
@@ -2701,22 +2593,14 @@ EXTERN_C const IID IID_OPCItems;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             OPCItems * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
             OPCItems * This,
@@ -2993,7 +2877,6 @@ EXTERN_C const IID IID_OPCItem;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct OPCItemVtbl
@@ -3004,7 +2887,7 @@ EXTERN_C const IID IID_OPCItem;
             OPCItem * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             OPCItem * This);
@@ -3032,22 +2915,14 @@ EXTERN_C const IID IID_OPCItem;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             OPCItem * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring][propget] */ HRESULT ( STDMETHODCALLTYPE *get_Parent )( 
             OPCItem * This,
@@ -3255,7 +3130,6 @@ EXTERN_C const IID IID_IOPCActivator;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct IOPCActivatorVtbl
@@ -3266,7 +3140,7 @@ EXTERN_C const IID IID_IOPCActivator;
             IOPCActivator * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             IOPCActivator * This);
@@ -3294,22 +3168,14 @@ EXTERN_C const IID IID_IOPCActivator;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             IOPCActivator * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *Attach )( 
             IOPCActivator * This,
@@ -3412,16 +3278,6 @@ unsigned long             __RPC_USER  LPSAFEARRAY_UserSize(     unsigned long *,
 unsigned char * __RPC_USER  LPSAFEARRAY_UserMarshal(  unsigned long *, unsigned char *, LPSAFEARRAY * ); 
 unsigned char * __RPC_USER  LPSAFEARRAY_UserUnmarshal(unsigned long *, unsigned char *, LPSAFEARRAY * ); 
 void                      __RPC_USER  LPSAFEARRAY_UserFree(     unsigned long *, LPSAFEARRAY * ); 
-
-unsigned long             __RPC_USER  BSTR_UserSize64(     unsigned long *, unsigned long            , BSTR * ); 
-unsigned char * __RPC_USER  BSTR_UserMarshal64(  unsigned long *, unsigned char *, BSTR * ); 
-unsigned char * __RPC_USER  BSTR_UserUnmarshal64(unsigned long *, unsigned char *, BSTR * ); 
-void                      __RPC_USER  BSTR_UserFree64(     unsigned long *, BSTR * ); 
-
-unsigned long             __RPC_USER  LPSAFEARRAY_UserSize64(     unsigned long *, unsigned long            , LPSAFEARRAY * ); 
-unsigned char * __RPC_USER  LPSAFEARRAY_UserMarshal64(  unsigned long *, unsigned char *, LPSAFEARRAY * ); 
-unsigned char * __RPC_USER  LPSAFEARRAY_UserUnmarshal64(unsigned long *, unsigned char *, LPSAFEARRAY * ); 
-void                      __RPC_USER  LPSAFEARRAY_UserFree64(     unsigned long *, LPSAFEARRAY * ); 
 
 /* end of Additional Prototypes */
 
